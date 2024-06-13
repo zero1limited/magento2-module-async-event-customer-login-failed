@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Integration\Api\CustomerTokenServiceInterface" type="Zero1\AsyncEventCustomerLoginFailed\Model\CustomerTokenService" />
+
+    <type name="Magento\Customer\Api\AccountManagementInterface">
+        <plugin name="zero1_async_event_customer_login_failed" type="Zero1\AsyncEventCustomerLoginFailed\Plugin\CustomerAccountManagement" sortOrder="1" />
+      </type>
+</config>
